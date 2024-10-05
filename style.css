@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font1;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(KFPk-9IF4FqAqY-.woff2);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(pDxWAF1pBB0dzGB.woff2);
+}
+
+@font-face {
+    font-family: flipkart1;
+    src: url(Inter-Regular.woff2);
+}
+
+@font-face {
+    font-family: flipkart2;
+    src: url(Inter-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: poppins-black;
+    src: url(Poppins-Black.ttf);
+}
+
+body {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.menus ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+
+.menus a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.menus a:hover {
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    position: relative;
+    color: black;
+    background-color: white;
+    border-radius: 40px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    color: white;
+}
+
+main h4 {
+    color: white;
+    margin: 70px;
+    border: 2px solid white;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    font-weight: 200;
+    border-radius: 20px;
+}
+
+.photo {
+    width: 100%;
+    height: 400px;
+}
+
+.image {
+    flex: 0 0 40px;
+    text-align: center;
+    width: 100%;
+    margin: 50px;
+}
+
+.head a {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.login {
+    background-color: black;
+    padding: 10px 5px;
+    border-radius: 30px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Add this to your style.css file */
+#background_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+    object-fit: cover;
+}
+
+/* Content Slider Container */
+.content-slider {
+    width: 80%;
+    height: 200px;
+    overflow: hidden;
+    margin: 30px auto;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Slider Wrapper to handle horizontal scrolling */
+.slider-wrapper {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide Styling */
+.slide {
+    width: 33.33%;
+    height: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: #f5f5f5;
+    border-right: 1px solid #ddd;
+}
+
+/* Optionally Style the Last Slide Differently */
+.slide:last-child {
+    border-right: none;
+}
+
+/* Button Styles */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+}
+
+/* Carousel Container Styling */
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for Individual Carousel Items */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    position: relative;
+    opacity: 1;
+}
+
+/* Image Styling */
+.carousel img {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Caption Styling */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+/* Carousel Navigation Button Styling */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicator Button Styling */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    background: #bbb;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background: #fff;
+}
+[data-carousel-item] img {
+    width: 80% !important;
+}
+[data-carousel-item]h4{
+    background-color: black!important;
+}
+.moto{
+    width:270px;
+    height:400px;
+    margin:70px;
+}
+.captions{
+    position: relative;
+    width:80%;
+    text-align:center;
+    margin-left: 10%;
+    color:black;
+}
+[data-carousel-item]{
+    position: relative;
+    width:80%
+}
+/* Custom styles for the carousel buttons with red background */
+.carousel-button {
+    background-color:#00e600; /* Red background */
+}
+
+.carousel-button:hover {
+    background-color: hsl(120, 59%, 63%); /* Darker red for hover effect */
+}
+.first {
+    margin-left: 115px;
+    margin-right:30px;
+    float:right;
+    background-color:red;
+    
+
+}
+.second {
+    color:green;
+    background-color: white;
+    width:30%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border:3px solid white;
+    font-size:1.2em;
+    margin-right:0px;
+    text-align:justify;
+    padding:35px;
+
+}
+.graph-section{
+    display:flex;
+    /* justify-content: space-around; */
+    /* align-content: center; */
+}
